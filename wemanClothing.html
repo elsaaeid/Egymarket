@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EgyMarket</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bx-up-arrow-alt'></i></button>
+<div class="container">
+<div class="header">
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><div class="home-massage w-75 text-center"><h1 class="text-info" id="massage"></h1></div>
+      </li>
+      <li class="btn actived"><a href="index.html" id="home">Home</a><a href="index.html"><i class="fa fa-home iFloat"></i></a></li>
+      <li class="btn drop-super"><a id="super">Super Market</a> <i class='bx bx-chevron-right'></i>
+	<!-- dropdown-content -->
+  <div class="dropdown-content">
+    <ul class="content">
+        <li class="btn"><a href="detergents.html" id="superOne">Detergents </a></li>
+        <li class="btn"><a href="oil.html" id="superTwo">oil, ghee</a></li>
+        <li class="btn"><a href="tea.html" id="superThree">tea, sugar</a></li>
+    </ul>
+  </div>
+</li>
+      <li class="btn"><a id="clothing">clothing</a><i class='bx bx-chevron-right'></i>
+
+	<!-- dropdown-content -->
+  <div class="dropdown-content">
+    <ul class="content">
+        <li class="btn"><a href="manClothing.html" id="clothingOne">men clothing </a></li>
+        <li class="btn"><a href="wemanClothing.html" id="clothingTwo">weman clothing</a></li>
+        <li class="btn"><a href="kidsClothing.html" id="clothingThree">kids clothing</a></li>
+    </ul>
+  </div>
+</li>
+      <li class="btn"><a id="smart">Smart Devices</a><i class='bx bx-chevron-right'></i>
+
+	<!-- dropdown-content -->
+  <div class="dropdown-content">
+    <ul class="content">
+        <li class="btn"><a href="smartWatches.html" id="smartOne">smart watches </a></li>
+        <li class="btn"><a href="smartMobiles.html" id="smartTwo">smart mobiles</a></li>
+        <li class="btn"><a href="smartLabtop.html" id="smartThree">smart labtop</a></li>
+    </ul>
+  </div>
+</li>
+      <li class="btn"><a href="accessories.html" id="accessories">Accessories</a></li>
+      <li class="btn"><a class=" btn-outline-warning" href="login.html" id="logOut">Log out</a><a href="login.html"><i class='bx bx-log-out-circle iFloat'></i></a></li>
+    </ul>
+  </div>
+	<!-- logo -->
+     <a href="#" class="logo" id="logo">Egymarket</a>
+        <!-- Cart-Icon -->
+	  <i class='bx bx-shopping-bag open-cart-btn' id="cart-icon"></i>
+        <!-- Search-Icon -->
+	 <i class='bx bx-search add-currency-btn' id="add-currency-btn"></i>
+<!-- Cart -->	
+	  <div class="cart">
+	     <h2 class="cart-title">Your Cart</h2>
+	     <!-- Content -->
+	     <div class="cart-content">
+
+	     </div>
+	     <!-- Total -->
+	     <div class="total">
+		<div class="total-title" id="total-title">Total</div>
+		<div class="total-price">$0</div>
+	     </div>
+	     <!-- Buy Button-->
+	     <button type="button" class="btn-buy" id="btn-buy">Buy Now</button>
+	     <!-- Cart Close-->
+	     <i class='bx bx-x' id="close-cart"></i>
+	  </div>
+	     <!-- add currency list-->
+	  <div class="add-currency-list">
+	     <!-- Search Close-->
+	     <i class='bx bx-x' id="close-search"></i>
+	   <div class="left" style="background-color:#bbb;">
+            <h2 id="list">List</h2>
+             <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+          <ul id="myMenu">
+           <li><a href="manClothing.html" id="item1">men clothing</a></li>
+           <li><a href="wemanClothing.html" id="item2">weman clothing</a></li>
+           <li><a href="accessories.html" id="item3">accessories</a></li>
+           <li><a href="smartMobiles.html" id="item4">smart mobiles</a></li>
+           <li><a href="smartWatches.html" id="item5">smart watches</a></li>
+           <li><a href="oil.html" id="item6">oil and ghee</a></li>
+           <li><a href="tea.html" id="item7">rice</a></li>
+           <li><a href="detergents.html" id="item8">detergents</a></li>
+         </ul>
+        </div>
+   </div>
+   <div class="clear"></div>
+</div>
+<button class="button" id="arabic">Arabic</button>
+<button class="button" id="english">English</button>
+<button class="button" onclick="history.back()"><i class='bx bx-left-arrow-alt' ></i></button>
+<button class="button" onclick="history.forward()"><i class='bx bx-right-arrow-alt'></i></button>
+
+ 
+    <h1 class="caption" id="title">Weman Clothing</h1>
+
+<!-- content -->
+<div class="shop-content">
+    <ul class="currencies">
+      <li class="currency" id="USD">
+	<!-- Box1 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item1.png" alt="" class="product-img">
+	     <h2 class="product-title">Title1</h2>
+	     <span class="price">$25</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+      <li class="currency" id="USD">
+	<!-- Box2 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item2.png" alt="" class="product-img">
+	     <h2 class="product-title">Title2</h2>
+	     <span class="price">$30</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+      <li class="currency" id="USD">
+	<!-- Box3 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item3.png" alt="" class="product-img">
+	     <h2 class="product-title">Title1</h2>
+	     <span class="price">$25</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+      <li class="currency" id="USD">
+	<!-- Box4 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item4.png" alt="" class="product-img">
+	     <h2 class="product-title">Title2</h2>
+	     <span class="price">$30</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>      <li class="currency" id="USD">
+	<!-- Box5 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item5.png" alt="" class="product-img">
+	     <h2 class="product-title">Title1</h2>
+	     <span class="price">$25</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+      <li class="currency" id="USD">
+	<!-- Box6 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item3.png" alt="" class="product-img">
+	     <h2 class="product-title">Title2</h2>
+	     <span class="price">$30</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>      <li class="currency" id="USD">
+	<!-- Box7 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item1.png" alt="" class="product-img">
+	     <h2 class="product-title">Title1</h2>
+	     <span class="price">$25</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+      <li class="currency" id="USD">
+	<!-- Box8 -->
+	  <div class="product-box">
+		<center>
+	     <img src="assets/img/item2.png" alt="" class="product-img">
+	     <h2 class="product-title">Title2</h2>
+	     <span class="price">$30</span>
+		</center>
+	     <i class='bx bx-shopping-bag add-cart'></i>
+	  </div>
+      </li>
+   </ul>
+</div>
+
+   
+  </div>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/homeCart.js"></script>
+<script src="assets/js/languageWemanClothe.js"></script>
+<script src="assets/js/home.js"></script> 
+</body>
+</html>
